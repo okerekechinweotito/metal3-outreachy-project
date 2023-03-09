@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Meta tags for SEO -->
+    <title>
+      Metal³ | Open-Source Kubernetes-Native Infrastructure Management Platform
+    </title>
+    <meta name="robots" content="index, follow">
+    <meta name="description"
+      content="Metal³ is an open source project that enables Kubernetes users to automatically provision and manage bare metal infrastructure. Learn more about Metal³ and how it can benefit your organization." />
+    <meta name="keywords" content="Metal³, Kubernetes, bare metal, infrastructure, open source" />
+    <meta name="author" content="Metal³" />
+    <meta property="og:title" content="Metal³ - Provisioning and managing bare metal infrastructure with Kubernetes" />
+    <meta property="og:description"
+      content="Metal³ is an open source project that enables Kubernetes users to automatically provision and manage bare metal infrastructure. Learn more about Metal³ and how it can benefit your organization." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metal3.io/" />
+    <meta property="og:image" content="https://metal3.io/images/metal3-logo.png" />
+    <meta property="og:image:alt" content="Metal³ Logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Metal³ - Provisioning and managing bare metal infrastructure with Kubernetes" />
+    <meta name="twitter:description"
+      content="Metal³ is an open source project that enables Kubernetes users to automatically provision and manage bare metal infrastructure. Learn more about Metal³ and how it can benefit your organization" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="icon" type="image/x-icon" href="./images//metal3-logo.svg" />
+  </head>
+
+  <body>
+    <nav>
+
+      <a href="/" class="logo-wrapper">
+
+        <div class="logo"></div>
+        <h2>Metal³.io</h2>
+      </a>
+
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item">
+          <a href="https://metal3.io/documentation.html" class="link link--dark" target='_blank'><i
+              class="fa fa-book"></i> Documentation</a>
+        </li>
+        <li class="menu__item">
+          <a href="https://github.com/metal3-io/metal3-io.github.io" class="link link--dark" target='_blank'><i
+              class="fa fa-github"></i> Github</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="intro">
+      <h1>Automate the deployment of bare metal infrastructure using Kubernetes.</h1>
+
+      <p>
+        Metal³ is an open-source project collaboration between <a href="https://www.openstack.org/"
+          target="_blank">OpenStack Foundation</a> and <a href="https://kubernetes.io/" target="_blank">
+          Kubernetes Community</a>.
+        Metal³ is itself a Kubernetes application, so it runs on Kubernetes, and uses Kubernetes resources and APIs as
+        its
+        interface.
+
+      </p>
+
+      <div class="intro-button-wrapper">
+        <a href="https://metal3.io/try-it.html" target="_blank">
+          <button class="button--start">Get Started &nbsp;
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </a>
+
+        <a href="https://github.com/metal3-io/metal3-io.github.io" target="_blank">
+
+          <button class="button--github">
+            <i class="fa fa-github" aria-hidden="true"></i>
+            Github </button>
+        </a>
+      </div>
+    </div>
+    <div class="hero">
+      <h1 class="hero__title">Metal³.io</h1>
+      <p class="hero__description">
+        Metal³ makes it easier for organizations to deploy and manage their applications at scale.
+      </p>
+    </div>
+    <div class="hero__terminal">
+      <pre>
+        <!-- Place your demo code here -->
+        <code class="shell-session demo">Metal³ Prerequisites</code>
+      </pre>
+    </div>
+
+    <section class="describe">
+      <h1>Why Metal³.io</h1>
+
+      <p>
+        There are a number of great open source tools for bare metal host provisioning, including Ironic. Metal3.io aims
+        to
+        build on these technologies to provide a Kubernetes native API for managing bare metal hosts via a provisioning
+        stack
+        that is also running on Kubernetes. We believe that Kubernetes Native Infrastructure, or managing your
+        infrastructure
+        just like your applications, is a powerful next step in the evolution of infrastructure management.
+      </p>
+
+      <p>
+        The Metal3.io project is also building integration with the Kubernetes cluster-api project, allowing Metal3.io
+        to be
+        used as an infrastructure backend for Machine objects from the Cluster API.
+      </p>
+    </section>
+
+
+
+    <div class="wrapper">
+      <div class="installation">
+        <h3 class="section__title">Quick Code Overview</h3>
+        <div class="tab__container">
+          <ul class="tab__menu">
+            <li class="tab active" data-tab="mac">setup</li>
+            <li class="tab" data-tab="linux">tear down</li>
+            <li class="tab" data-tab="win">env variables</li>
+          </ul>
+          <pre class="nohighlight code">
+            <code class="tab__pane active mac">
+              clone <a href="https://github.com/metal3-io/metal3-io.github.io" target="_blank" class="repo-link">
+                metal³-dev-env</a> and run <br/>
+              $  make <br/><br />
+            
+            The Makefile runs a series of scripts, described here:<br /><br />
+            
+            01_prepare_host.sh - Installs all needed packages.<br /><br />
+            
+            02_configure_host.sh - Creates a set of VMs that will be managed as if they were bare metal hosts. It also downloads
+            some images needed for Ironic.<br /><br />
+            
+            03_launch_mgmt_cluster.sh - Launches a management cluster using minikube or kind and runs the baremetal-operator on that
+            cluster.<br /><br />
+            
+            04_verify.sh - Runs a set of tests that verify that the deployment completed successfully.<br /><br />
+            
+            When the environment setup is completed, you should be able to see BareMetalHost (bmh) objects in Ready state.
+            </code>
+            <code class="tab__pane linux">
+              To tear down the environment, run <br />
+              $ make clean <br/><br />
+            
+            Note<br />
+            
+            When redeploying metal³-dev-env with a different release version of CAPM3, you must set the FORCE_REPO_UPDATE variable
+            in config_${user}.sh to true.<br /><br />
+            
+            Warning<br />
+            
+            If you see this error during the installation:<br />
+            
+  
+            error: failed to connect to the hypervisor \ <br />
+            error: Failed to connect socket to '/var/run/libvirt/libvirt-sock': Permission denied<br /><br />
+            You may need to log out then login again, and run make clean and make again.
+            
+            
+            </code>
+            <code class="tab__pane win">
+              To set environment variables persistently, export them from the configuration file used by metal³-dev-env scripts: <br /><br />
+              $ cp config_example.sh 
+              config_$(whoami).sh
+              <br />
+              $ vim config_$(whoami).sh <br /><br />
+            
+            More information about the specific environment variables used to set up metal3-dev-env can be found <a href="https://github.com/metal3-io/metal3-dev-env/blob/master/vars.md" target="_blank" rel="noopener noreferrer">here</a>
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <section class="feature-wrapper">
+        <h1>Components</h1>
+        <div class="feature">
+          <div class="feature__item">
+            <h3 class="section__title">Baremetal Operator (BMO)</h3>
+            <p>
+              a controller that manages the BareMetalHost resources and interacts with the hardware using protocols like
+              Redfish. This
+              is like a switchboard that lets you turn on and off your computers and make them do things. For example,
+              you can use it
+              to make your storage computer save data or delete data, or make your application computer run a program,
+              or stop a
+              program.
+            </p>
+          </div>
+          <div class="feature__item">
+            <h3 class="section__title">Cluster API Provider Metal³ (CAPM3)</h3>
+            <p>
+              a component that integrates Metal³ with Cluster API, a framework for declarative Kubernetes cluster
+              management. This is
+              like a guidebook that tells you how to use your computers to do different things. For example, it can tell
+              you how many
+              storage computers you need for saving data, how many application computers you need for running programs,
+              etc.
+
+            </p>
+          </div>
+          <div class="feature__item">
+            <h3 class="section__title">BareMetalHost</h3>
+            <p>a custom resource that represents a physical server and its inventory data. This is like a name tag that
+              you put on each
+              computer to tell what kind of computer it is and what it can do. For example, you can name a computer as
+              “storage”,
+              “application”, “internet”, etc.
+            </p>
+          </div>
+          <div class="feature__item">
+            <h3 class="section__title">Hardware Classification Controller (HCC)</h3>
+            <p>
+              a controller that classifies BareMetalHosts into
+              user-defined groups based on hardware details. This is like a sorter
+              that helps you organize your computers into different groups based on their name tags. For example, it can
+              sort all the
+              storage computers together or all the internet computers together.
+
+            </p>
+          </div>
+          <div class="feature__item">
+            <h3 class="section__title">IP Address Manager (IPAM)</h3>
+            <p>
+              a component that assigns IP addresses to BareMetalHosts from a pool of available addresses. This is like a
+              phone book
+              that gives each computer a unique number so you can call them and talk to them. For example, you can use
+              it to tell one
+              internet computer to send data to another internet computer or receive data from another internet
+              computer.
+
+            </p>
+          </div>
+          <div class="feature__item">
+            <h3 class="section__title">Metal³ Hardware Inventory Record (M3HIR)</h3>
+            <p>
+              a custom resource that stores hardware inventory data collected from BareMetalHosts. This is like a diary
+              that keeps
+              track of all the details about your computers and what they are doing. For example, it can record how much
+              data each
+              storage computer has saved or deleted or how fast each application computer has run a program.
+
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="keybinding">
+        <ul class="keybinding__detail">
+          <h3 class="keybinding__title">Goals</h3>
+          <li>
+            To provide a framework that is scalable, vendor-neutral, and accessible to users of any skill level.
+
+          </li>
+          <br />
+
+          <li>Metal3 aims to provide a consistent and declarative API for managing bare metal infrastructure. </li>
+          <br />
+
+          <li>To make the deployment, configuration, and management of bare metal infrastructure as easy as cloud
+            infrastructure.
+          </li>
+
+
+
+        </ul>
+        <ul class="keybinding__detail">
+          <h3 class="keybinding__title">Missions</h3>
+          <li>To provide a solution that is suitable for use in various use cases, including edge computing,
+            high-performance
+            computing, and traditional data centers
+          </li>
+          <br />
+          <li>To automate the lifecycle management of bare metal hosts, including provisioning, configuration, and
+            decommissioning </li>
+        </ul>
+      </div>
+      <div class="callout">
+        <p>Read the Metal³.io user-guide for more in-dept description</p>
+        <a href="https://book.metal3.io/introduction.html" class="button--secondary" target="_blank">User-Guide</a>
+      </div>
+    </div>
+    <div class="changelog">
+      <div class="wrapper">
+        <h3 class="section__title">Read about the newest updates in Metal³.io Community</h3>
+
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">Metal³</h4>
+          </div>
+          <div class="changelog__detail">
+            <ul>
+              <a href="https://metal3.io/blog/2022/07/08/One_cluster_multiple_providers.html" target="_blank">
+                <li>One cluster - multiple providers</li>
+              </a>
+
+              <a href="https://metal3.io/blog/2021/05/05/Pivoting.html" target="_blank">
+                <li>Metal3 Introduces Pivoting</li>
+              </a>
+
+              <a href="https://metal3.io/blog/2020/07/06/IP_address_manager.html" target="_blank">
+                <li>Introducing the Metal3 IP Address Manager </li>
+              </a>
+
+              <a href="https://metal3.io/blog/2020/07/05/raw-image-streaming.html" target="_blank">
+                <li>Raw image streaming available in Metal3</li>
+              </a>
+
+              <a href="https://metal3.io/blog/2020/06/18/Metal3-dev-env-BareMetal-Cluster-Deployment.html"
+                target="_blank">
+                <li>Metal³ development environment walkthrough part 2: Deploying a new bare metal cluster</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">Baremetal</h4>
+          </div>
+          <div class="changelog__detail">
+            <ul>
+              <a href="https://metal3.io/blog/2019/11/13/Extend_Your_Data_Center_to_the_Hybrid_Edge-Red_Hat_Summit.html"
+                target="_blank">
+
+                <li>Extend Your Data Center to the Hybrid Edge</li>
+              </a>
+
+              <a href="https://metal3.io/blog/2019/10/31/OpenStack-Ironic-and-Bare-Metal-Infrastructure_All-Abstractions-Start-Somewhere.html"
+                target="_blank">
+                <li>OpenStack Ironic and Bare Metal Infrastructure: All Abstractions Start Somewhere</li>
+              </a>
+
+              <a href="https://metal3.io/blog/2020/03/05/CAPI_provider_renaming.html" target="_blank">
+                <li>Cluster API provider renaming</li>
+              </a>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">Kubernetes</h4>
+          </div>
+          <div class="changelog__detail">
+            <ul>
+              <a href="https://metal3.io/blog/2020/02/27/talk-kubernetes-finland-metal3.html" target="_blank">
+                <li>Metal³: Kubernetes Native Bare Metal Cluster Management</li>
+              </a>
+
+              <a href="https://metal3.io/blog/2020/06/18/Metal3-dev-env-BareMetal-Cluster-Deployment.html"
+                target="_blank">
+                <li>Metal³ development environment walkthrough part 2: Deploying a new bare metal cluster</li>
+              </a>
+
+              <a href="https://metal3.io/blog/2019/11/07/Kubernetes-native_Infrastructure-Managed_Baremetal_with_Kubernetes_Operators_and_OpenStack_Ironic.html"
+                target="_blank">
+                <li>Kubernetes-native Infrastructure: Managed Baremetal with Kubernetes Operators and OpenStack Ironic
+                </li>
+              </a>
+
+              <a href="https://metal3.io/blog/2019/10/31/OpenStack-Ironic-and-Bare-Metal-Infrastructure_All-Abstractions-Start-Somewhere.html"
+                target='_blank'>
+                <li>OpenStack Ironic and Bare Metal Infrastructure: All Abstractions Start Somewhere</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+
+        <div class="changelog__callout">
+          <a href="https://metal3.io/blog/" class="button--secondary" target="_blank">Check Full Blog</a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>
+        Copyright 2023 The Metal³ Contributors - <a href="https://metal3.io/privacy-statement.html" target="_blank"
+          rel="noopener noreferrer">Privacy Statement</a>
+      </p>
+      <div>
+        <a href="https://github.com/metal3-io/metal3-io.github.io" class="link link--dark" target='_blank'>
+          <i class="fa fa-github"></i></a>
+        <a href="https://twitter.com/metal3_io" class="link link--dark" target='_blank'>
+          <i class="fa fa-twitter"></i></a>
+
+        <a href="https://www.youtube.com/channel/UC_xneeYbo-Dl4g-U78xW15g/videos" class="link link--dark"
+          target='_blank'>
+          <i class="fa fa-youtube"></i></a>
+        <a href="https://groups.google.com/g/metal3-dev" class="link link--dark" target='_blank'>
+          <i class="fa fa-envelope"></i></a>
+
+        <a href="https://kubernetes.slack.com/messages/CHD49TLE7" class="link link--dark" target='_blank'>
+          <i class="fa fa-hashtag"></i></a>
+
+      </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="./script.js"></script>
+  </body>
+
+</html>
