@@ -1,7 +1,7 @@
 ## Outreachy Metal³ Bonus Task by Okereke Chinweotito  (okerekechinweotitopeace@gmail.com)
 
 
-Link to live demo on GitHu-Pages - https://okerekechinweotito.github.io/metal3-outreachy-project/
+Link to live demo on GitHub-Pages - https://okerekechinweotito.github.io/metal3-outreachy-project/
 
 ## Technologies used
 
