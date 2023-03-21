@@ -170,66 +170,7 @@
     </section>
 
     <div class="wrapper">
-      <div class="installation">
-        <h3 class="section__title">Quick Code Overview</h3>
-        <div class="tab__container">
-          <ul class="tab__menu">
-            <li class="tab active" data-tab="mac">setup</li>
-            <li class="tab" data-tab="linux">tear down</li>
-            <li class="tab" data-tab="win">env variables</li>
-          </ul>
-          <pre class="nohighlight code">
-            <code class="tab__pane active mac">
-              clone <a href="https://github.com/metal3-io/metal3-io.github.io" target="_blank" class="repo-link">
-                metal³-dev-env</a> and run <br/>
-              $  make <br/><br />
-            
-            The Makefile runs a series of scripts, described here:<br /><br />
-            
-            01_prepare_host.sh - Installs all needed packages.<br /><br />
-            
-            02_configure_host.sh - Creates a set of VMs that will be managed as if they were bare metal hosts. It also downloads
-            some images needed for Ironic.<br /><br />
-            
-            03_launch_mgmt_cluster.sh - Launches a management cluster using minikube or kind and runs the baremetal-operator on that
-            cluster.<br /><br />
-            
-            04_verify.sh - Runs a set of tests that verify that the deployment completed successfully.<br /><br />
-            
-            When the environment setup is completed, you should be able to see BareMetalHost (bmh) objects in Ready state.
-            </code>
-            <code class="tab__pane linux">
-              To tear down the environment, run <br />
-              $ make clean <br/><br />
-            
-            Note<br />
-            
-            When redeploying metal³-dev-env with a different release version of CAPM3, you must set the FORCE_REPO_UPDATE variable
-            in config_${user}.sh to true.<br /><br />
-            
-            Warning<br />
-            
-            If you see this error during the installation:<br />
-            
-  
-            error: failed to connect to the hypervisor \ <br />
-            error: Failed to connect socket to '/var/run/libvirt/libvirt-sock': Permission denied<br /><br />
-            You may need to log out then login again, and run make clean and make again.
-            
-            
-            </code>
-            <code class="tab__pane win">
-              To set environment variables persistently, export them from the configuration file used by metal³-dev-env scripts: <br /><br />
-              $ cp config_example.sh 
-              config_$(whoami).sh
-              <br />
-              $ vim config_$(whoami).sh <br /><br />
-            
-            More information about the specific environment variables used to set up metal3-dev-env can be found <a href="https://github.com/metal3-io/metal3-dev-env/blob/master/vars.md" target="_blank" rel="noopener noreferrer">here</a>
-            </code>
-          </pre>
-        </div>
-      </div>
+      
 
       <section class="feature-wrapper">
         <h1>Components</h1>
@@ -356,6 +297,68 @@
         >
       </div>
     </div>
+<div class="wrapper">
+  <div class="installation">
+    <h3 class="section__title">Quick Code Overview</h3>
+    <div class="tab__container">
+      <ul class="tab__menu">
+        <li class="tab active" data-tab="mac">setup</li>
+        <li class="tab" data-tab="linux">tear down</li>
+        <li class="tab" data-tab="win">env var</li>
+      </ul>
+      <pre class="nohighlight code">
+              <code class="tab__pane active mac">
+                clone <a href="https://github.com/metal3-io/metal3-io.github.io" target="_blank" class="repo-link">
+                  metal³-dev-env</a> and run <br/>
+                $  make <br/><br />
+  
+              The Makefile runs a series of scripts, described here:<br /><br />
+  
+              01_prepare_host.sh - Installs all needed packages.<br /><br />
+  
+              02_configure_host.sh - Creates a set of VMs that will be managed as if they were bare metal hosts. It also downloads
+              some images needed for Ironic.<br /><br />
+  
+              03_launch_mgmt_cluster.sh - Launches a management cluster using minikube or kind and runs the baremetal-operator on that
+              cluster.<br /><br />
+  
+              04_verify.sh - Runs a set of tests that verify that the deployment completed successfully.<br /><br />
+  
+              When the environment setup is completed, you should be able to see BareMetalHost (bmh) objects in Ready state.
+              </code>
+              <code class="tab__pane linux">
+                To tear down the environment, run <br />
+                $ make clean <br/><br />
+  
+              Note<br />
+  
+              When redeploying metal³-dev-env with a different release version of CAPM3, you must set the FORCE_REPO_UPDATE variable
+              in config_${user}.sh to true.<br /><br />
+  
+              Warning<br />
+  
+              If you see this error during the installation:<br />
+  
+  
+              error: failed to connect to the hypervisor \ <br />
+              error: Failed to connect socket to '/var/run/libvirt/libvirt-sock': Permission denied<br /><br />
+              You may need to log out then login again, and run make clean and make again.
+  
+  
+              </code>
+              <code class="tab__pane win">
+                To set environment variables persistently, export them from the configuration file used by metal³-dev-env scripts: <br /><br />
+                $ cp config_example.sh
+                config_$(whoami).sh
+                <br />
+                $ vim config_$(whoami).sh <br /><br />
+  
+              More information about the specific environment variables used to set up metal3-dev-env can be found <a href="https://github.com/metal3-io/metal3-dev-env/blob/master/vars.md" target="_blank" rel="noopener noreferrer">here</a>
+              </code>
+            </pre>
+    </div>
+  </div>
+</div>
     <div class="changelog">
       <div class="wrapper">
         <h3 class="section__title">
