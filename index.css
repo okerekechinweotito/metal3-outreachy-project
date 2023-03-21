@@ -1,18 +1,18 @@
 /* css variables*/
 :root {
-  --primary-color: #4FD1C5;
-  --primary-color-light: #6EDDE2;
-  --primary-color-dark: #1F8681;
-  --accent-color: #C54F5B;
-  --accent-color-light: #FFE4E4;
-  --accent-color-dark: #B94B4C;
-  --white-color: #FAFBFC;
-  --light-gray-color: #EDF2F7;
-  --medium-gray-color: #A0AEC0;
-  --dark-gray-color: #A0AEC0;
-  --bg-color: #1A202C;
-  --code-bg-color: #F0E8E8;
-  --mate-black: #3F444E;
+  --primary-color: #4fd1c5;
+    --primary-color-light: #6edde2;
+    --primary-color-dark: #1f8681;
+    --accent-color: #c54f5b;
+    --accent-color-light: #ffe4e4;
+    --accent-color-dark: #b94b4c;
+    --white-color: #fafbfc;
+    --light-gray-color: #edf2f7;
+    --medium-gray-color: #a0aec0;
+    --dark-gray-color: #a0aec0;
+    --bg-color: #1a202c;
+    --code-bg-color: #f0e8e8;
+    --mate-black: #3f444e;
   --pure-black: #000;
 }
 
@@ -21,7 +21,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   background-color: var(--bg-color);
 }
 
@@ -103,7 +103,6 @@ hr {
 
 @media (max-width: 600px) {
   .tab__pane.active {
-
     font-size: 12px;
   }
 }
@@ -111,7 +110,8 @@ hr {
 /* code */
 .code {
   border-radius: 3px;
-  font-family: Space Mono, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-family: Space Mono, SFMono-Regular, Menlo, Monaco, Consolas,
+      Liberation Mono, Courier New, monospace;
   background: var(--bg-color);
   border: 1px solid var(--code-bg-color);
   color: var(--primary-color-light);
@@ -136,7 +136,7 @@ hr {
   position: relative;
   text-decoration: none;
   border: 0;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .button--primary:after {
@@ -217,7 +217,7 @@ nav {
 .toggle span,
 .toggle span:before,
 .toggle span:after {
-  content: '';
+  content: "";
   position: absolute;
   height: 2px;
   width: 18px;
@@ -287,8 +287,6 @@ nav {
   justify-content: center;
 }
 
-
-
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -316,9 +314,8 @@ nav {
   color: var(--light-gray-color);
 }
 
-
 .logo {
-  background: url('https://book.metal3.io/images/metal3-color.svg') no-repeat;
+  background: url("https://book.metal3.io/images/metal3-color.svg") no-repeat;
   background-size: contain;
   margin: 0 0 0 auto;
   width: 50px;
@@ -329,10 +326,7 @@ nav {
   background-color: var(--bg-color);
 }
 
-
-
 /* Intro section */
-
 
 .intro {
   display: flex;
@@ -371,7 +365,6 @@ nav {
   cursor: pointer;
 }
 
-
 .intro-button-wrapper .button--start {
   width: 190px;
   background-color: var(--primary-color);
@@ -390,8 +383,6 @@ nav {
 .intro-button-wrapper .button--github:hover {
   background-color: var(--pure-black);
 }
-
-
 
 /* hero section */
 .hero {
@@ -421,7 +412,6 @@ nav {
   box-shadow: 0px 12px 36.8px 9.2px rgba(0, 0, 0, 0.1);
 }
 
-
 .hero__terminal pre {
   white-space: pre-line;
   padding-top: 1rem;
@@ -443,7 +433,6 @@ nav {
   word-spacing: 10px;
 }
 
-
 /* Quick Code Overview */
 
 .repo-link {
@@ -453,14 +442,12 @@ nav {
 
 .repo-link:hover {
   color: var(--accent-color) !important;
-
 }
 
 .shell-session {
   color: var(--medium-gray-color);
   font-size: 18px;
 }
-
 
 /* feature section */
 .feature-wrapper {
@@ -483,7 +470,7 @@ nav {
 
 .feature__item .section__title {
   margin-bottom: 0;
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 
 .feature__item p {
@@ -506,8 +493,8 @@ nav {
 }
 
 .keybinding__title {
-  background-color: var(--mate-black) !important;
-  color: var(--white-color);
+  background-color: var(--primary-color) !important;
+    color: var(--pure-black);
 }
 
 .keybinding__detail li {
@@ -540,7 +527,6 @@ nav {
   padding: 0 0.5rem;
 }
 
-
 /* callout section */
 .callout {
   text-align: center;
@@ -567,12 +553,10 @@ nav {
   flex-basis: 25%;
 }
 
-
 .changelog__title {
   margin-bottom: 0;
   color: var(--medium-gray-color);
 }
-
 
 .changelog__callout {
   margin: 3rem auto 2rem auto;
@@ -595,11 +579,12 @@ nav {
     width: 70%;
   }
 
-  .tab__container>ul {
-    right: auto;
-    left: 0;
-    padding-left: 0;
-  }
+.tab__container>ul {
+  right: auto;
+  left: 0;
+  padding-left: 0;
+
+}
 
   .tab__container .code {
     margin-top: 2rem;
@@ -623,35 +608,35 @@ nav {
 
 @media screen and (max-width: 600px) {
   nav {
-      grid-template-columns: 70px auto;
+    grid-template-columns: 70px auto;
       height: auto;
     }
-  
+    
     .menu__item {
       display: none;
     }
-  
+    
     .menu__item.toggle {
       display: inline-block;
     }
-  
+    
     .menu {
       text-align: right;
       padding: 0.5rem 1rem;
       display: block;
       margin: 0.5em 1em 0 0;
     }
-  
+    
     .toggle {
       display: block;
     }
-  
+    
     .menu.responsive .menu__item:not(:first-child) {
       display: block;
       padding: 0 0 0.5rem 0;
     }
   .logo {
-    margin: 0rem 0 0 1rem
+    margin: 0rem 0 0 1rem;
   }
 
   .hero {
