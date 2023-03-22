@@ -473,6 +473,9 @@ nav {
   color: var(--primary-color);
 }
 
+.feature__item .section__title:hover {
+  color: var(--accent-color);
+}
 .feature__item p {
   margin-top: 0.5rem;
 }
