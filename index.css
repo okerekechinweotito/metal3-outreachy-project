@@ -49,6 +49,15 @@ hr {
   box-sizing: border-box;
 }
 
+/* background color of the scrollbar track */
+::-webkit-scrollbar {
+  background-color: var(--bg-color);
+}
+
+/* color and width of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
 /* global components */
 
 /* typography */
