@@ -176,10 +176,10 @@
               <h3 class="section__title">Baremetal Operator (BMO)</h3>
             </a>
             <p>
-            The Baremetal Operator (BMO) is a controller that manages BareMetalHost resources and interacts with hardware using
-            protocols like Redfish. BMO acts as a switchboard, allowing users to power on and off computers and perform tasks such
-            as storing or deleting data, running or stopping programs, and more. BMO optimizes computing resources and provides
-            users with control and flexibility, while also being customizable to fit various use cases.... <a
+Baremetal operator is a Metal³ component that automates the deployment and management of bare metal
+infrastructure. It uses Ironic, an OpenStack project, as the underlying provisioning and management tool for bare metal
+servers. It is the main component that interfaces with the Ironic API for all operations needed to provision bare-metal
+hosts... <a
               href="https://book.metal3.io/bmo/introduction.html"
                 target="_blank">Read more</a>
             </p>
@@ -189,11 +189,10 @@
               <h3 class="section__title">Cluster API Provider Metal³ (CAPM3)</h3>
             </a>
             <p>
-            The Cluster API Provider is a software component that seamlessly integrates Metal³ with the Cluster API framework, which
-            is designed for managing Kubernetes clusters in a declarative manner. It serves as a comprehensive reference manual that
-            outlines the steps required to leverage your computer resources for various tasks. With this tool, you can easily
-            determine the number of storage computers needed to store data, the appropriate number of application computers required
-            to run programs, and more.... <a href="https://book.metal3.io/capm3/introduction.html" target="_blank"
+            The Cluster API Provider integrates Metal³ with the Cluster API framework which is used for managing Kubernetes clusters
+            in a
+            declarative manner. It is a comprehensive reference manual outlining the steps needed to optimize computer resources for
+            various tasks... <a href="https://book.metal3.io/capm3/introduction.html" target="_blank"
                 rel="noopener noreferrer"> Read more</a>
             </p>
           </div>
@@ -203,8 +202,7 @@
             </a>
             <p>
             Baremetalhost is a specialized resource that embodies a physical server and all its relevant inventory data. It serves a
-            similar function to a name tag that is placed on each computer to identify its type and capabilities. This allows for
-            easy categorization of servers based on their specific roles, such as "storage", "application", "internet", and so on...
+            similar function to a name tag that is placed on each computer to identify its type and capabilities...
             <a href="https://github.com/metal3-io/baremetal-operator" target="_blank"
                 rel="noopener noreferrer">Read more</a>
             </p>
@@ -218,8 +216,7 @@
             <p>
               The Hardware Classification Controller (HCC) is a specialized controller that categorizes BareMetalHosts into
               custom-defined groups according to their hardware specifications. It functions similarly to a sorting machine, enabling
-              users to arrange their computers into distinct groups based on their respective name tags. For instance, the HCC can
-              efficiently group all the storage computers or all the internet computers together... <a
+              users to arrange their computers into distinct groups based on their respective name tags... <a
                 href="https://github.com/metal3-io/hardware-classification-controller" target="_blank" rel="noopener noreferrer">Read
                 more</a>
             </p>
@@ -231,9 +228,8 @@
             <p>
             The IP address manager is a crucial component responsible for assigning unique IP addresses to BareMetalHosts from a
             pool of available addresses. This system functions similarly to a phone book that provides each computer with a
-            distinctive identification number, enabling communication between them. For instance, it enables the transmission of
-            data between internet-connected computers by directing one computer to send data to another or receive data from another
-            computer.... <a href="https://book.metal3.io/ipam/introduction.html" target="_blank"
+            distinctive identification number, enabling communication between them.... <a
+              href="https://book.metal3.io/ipam/introduction.html" target="_blank"
                 rel="noopener noreferrer">Read more</a>
             </p>
           </div>
@@ -246,8 +242,7 @@
             <p>
             The Metal³ Hardware Inventory Record is a specialized resource designed to store hardware inventory data gathered from
             BareMetalHosts. It functions similarly to a diary, keeping a detailed log of information regarding your computers and
-            their activities. For instance, it can document the amount of data saved or deleted by each storage computer or the
-            speed at which each application computer runs a program.... <a
+            their activities... <a
               href="https://github.com/metal3-io/ironic-hardware-inventory-recorder-image" target="_blank"
                 rel="noopener noreferrer">Read more</a>
             </p>
