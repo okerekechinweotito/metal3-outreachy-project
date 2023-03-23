@@ -7,7 +7,7 @@ Link to live demo on GitHub-Pages - https://okerekechinweotito.github.io/metal3-
 
 1. HTML
 2. CSS
-3. JavaScript
+3. JavaScript.
 
 ## Demo Snapshot
 
