@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,41 +9,25 @@
       Metal³ | Open-Source Kubernetes-Native Infrastructure Management Platform
     </title>
     <meta name="robots" content="index, follow" />
-    <meta
-      name="description"
+    <meta name="description"
       content="Metal³ is an open source project that enables Kubernetes users to automatically provision and manage bare metal infrastructure. Learn more about Metal³ and how it can benefit your organization." />
-    <meta
-      name="keywords"
-      content="Metal³, Kubernetes, bare metal, infrastructure, open source" />
+    <meta name="keywords" content="Metal³, Kubernetes, bare metal, infrastructure, open source" />
     <meta name="author" content="Metal³" />
-    <meta
-      property="og:title"
-      content="Metal³ - Provisioning and managing bare metal infrastructure with Kubernetes" />
-    <meta
-      property="og:description"
+    <meta property="og:title" content="Metal³ - Provisioning and managing bare metal infrastructure with Kubernetes" />
+    <meta property="og:description"
       content="Metal³ is an open source project that enables Kubernetes users to automatically provision and manage bare metal infrastructure. Learn more about Metal³ and how it can benefit your organization." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://metal3.io/" />
-    <meta
-      property="og:image"
-      content="https://metal3.io/images/metal3-logo.png" />
+    <meta property="og:image" content="https://metal3.io/images/metal3-logo.png" />
     <meta property="og:image:alt" content="Metal³ Logo" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Metal³ - Provisioning and managing bare metal infrastructure with Kubernetes" />
-    <meta
-      name="twitter:description"
+    <meta name="twitter:title" content="Metal³ - Provisioning and managing bare metal infrastructure with Kubernetes" />
+    <meta name="twitter:description"
       content="Metal³ is an open source project that enables Kubernetes users to automatically provision and manage bare metal infrastructure. Learn more about Metal³ and how it can benefit your organization" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900"
-      rel="stylesheet" />
-    <link
-      rel="stylesheet"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css" />
     <link rel="stylesheet" href="./index.css" />
     <link rel="icon" type="image/x-icon" href="./images//metal3-logo.svg" />
@@ -58,20 +43,12 @@
       <ul class="menu">
         <div class="menu__item toggle"><span></span></div>
         <li class="menu__item">
-          <a
-            href="https://metal3.io/documentation.html"
-            class="link link--dark"
-            target="_blank"
-            ><i class="fa fa-book"></i> Documentation</a
-          >
+          <a href="https://metal3.io/documentation.html" class="link link--dark" target="_blank"><i class="fa fa-book"></i>
+            Documentation</a>
         </li>
         <li class="menu__item">
-          <a
-            href="https://github.com/metal3-io"
-            class="link link--dark"
-            target="_blank"
-            ><i class="fa fa-github"></i> Github</a
-          >
+          <a href="https://github.com/metal3-io" class="link link--dark" target="_blank"><i class="fa fa-github"></i>
+            Github</a>
         </li>
       </ul>
     </nav>
@@ -82,13 +59,10 @@
 
       <p>
         Metal³ is an open-source project collaboration between
-        <a href="https://www.openstack.org/" target="_blank"
-          >OpenStack Foundation</a
-        >
+        <a href="https://www.openstack.org/" target="_blank">OpenStack Foundation</a>
         and
         <a href="https://kubernetes.io/" target="_blank">
-          Kubernetes Community</a
-        >. Metal³ is itself a Kubernetes application, so it runs on Kubernetes,
+          Kubernetes Community</a>. Metal³ is itself a Kubernetes application, so it runs on Kubernetes,
         and uses Kubernetes resources and APIs as its interface.
       </p>
 
@@ -100,9 +74,7 @@
           </button>
         </a>
 
-        <a
-          href="https://github.com/metal3-io"
-          target="_blank">
+        <a href="https://github.com/metal3-io" target="_blank">
           <button class="button--github">
             <i class="fa fa-github" aria-hidden="true"></i>
             Github
@@ -110,7 +82,7 @@
         </a>
       </div>
     </div>
-  <!--  <div class="hero">
+    <!--  <div class="hero">
       <h1 class="hero__title">Metal³.io Overview</h1>
       <p class="hero__description">
         Metal³ makes it easier for organizations to deploy and manage their
@@ -135,38 +107,43 @@
       </p>
 
       <p>
-      <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a> builds on the work of other
-      open-source tools for bare metal host provisioning, such as <a href="https://book.metal3.io/ironic/introduction.html"
-        target="_blank" rel="noopener noreferrer">Ironic</a>, and
-      extends
-      their capabilities by providing a Kubernetes-native API. This approach enables users to manage their bare metal
-      infrastructure just like they manage their applications, using familiar tools and interfaces, and leveraging the
-      scalability and flexibility of <a href="https://kubernetes.io/" target="_blank"
-        rel="noopener noreferrer">Kubernetes.</a>
+        <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a> builds on the work of other
+        open-source tools for bare metal host provisioning, such as <a href="https://book.metal3.io/ironic/introduction.html"
+          target="_blank" rel="noopener noreferrer">Ironic</a>,
+        and
+        extends
+        their capabilities by providing a Kubernetes-native API. This approach enables users to manage their bare metal
+        infrastructure just like they manage their applications, using familiar tools and interfaces, and leveraging the
+        scalability and flexibility of <a href="https://kubernetes.io/" target="_blank"
+          rel="noopener noreferrer">Kubernetes.</a>
       </p>
 
       <p>
-      One of the key features of <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a> is its
-      integration with the <a href="https://book.metal3.io/capm3/introduction.html" target="_blank"
-        rel="noopener noreferrer">Kubernetes cluster-API project.</a>
-      This integration allows
-      <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a> to be used as an infrastructure
-      backend for Machine objects from the <a href="https://book.metal3.io/capm3/introduction.html" target="_blank"
-        rel="noopener noreferrer">Cluster API</a>, making it easier for users to
-      manage and deploy their bare metal hosts. <br><br>
+        One of the key features of <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a> is
+        its
+        integration with the <a href="https://book.metal3.io/capm3/introduction.html" target="_blank"
+          rel="noopener noreferrer">Kubernetes cluster-API project.</a>
+        This integration allows
+        <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a> to be used as an
+        infrastructure
+        backend for Machine objects from the <a href="https://book.metal3.io/capm3/introduction.html" target="_blank"
+          rel="noopener noreferrer">Cluster API</a>, making it easier for users to
+        manage and deploy their bare metal hosts. <br><br>
 
-      With <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a>, users can deploy and manage
-      their bare metal infrastructure at scale, similar to how cloud providers manage
-      virtual machines. This solution is ideal for use cases that require high-performance computing, edge computing, and
-      traditional data centers. By providing a scalable, open-source solution for bare metal infrastructure management, <a
-        href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a>
-      is empowering users to take control of their infrastructure and leverage the full potential of <a
-        href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer">Kubernetes.</a>
+        With <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a>, users can deploy and
+        manage
+        their bare metal infrastructure at scale, similar to how cloud providers manage
+        virtual machines. This solution is ideal for use cases that require high-performance computing, edge computing,
+        and
+        traditional data centers. By providing a scalable, open-source solution for bare metal infrastructure
+        management, <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a>
+        is empowering users to take control of their infrastructure and leverage the full potential of <a
+          href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer">Kubernetes.</a>
       </p>
     </section>
 
     <div class="wrapper">
-      
+
 
       <section class="feature-wrapper">
         <h1>Components</h1>
@@ -176,12 +153,12 @@
               <h3 class="section__title">Baremetal Operator (BMO)</h3>
             </a>
             <p>
-Baremetal operator is a Metal³ component that automates the deployment and management of bare metal
-infrastructure. It uses Ironic, an OpenStack project, as the underlying provisioning and management tool for bare metal
-servers. It is the main component that interfaces with the Ironic API for all operations needed to provision bare-metal
-hosts... <a
-              href="https://book.metal3.io/bmo/introduction.html"
-                target="_blank">Read more</a>
+              Baremetal operator is a Metal³ component that automates the deployment and management of bare metal
+              infrastructure. It uses Ironic, an OpenStack project, as the underlying provisioning and management tool
+              for bare metal
+              servers. It is the main component that interfaces with the Ironic API for all operations needed to
+              provision bare-metal
+              hosts... <a href="https://book.metal3.io/bmo/introduction.html" target="_blank">Read more</a>
             </p>
           </div>
           <div class="feature__item">
@@ -189,10 +166,12 @@ hosts... <a
               <h3 class="section__title">Cluster API Provider Metal³ (CAPM3)</h3>
             </a>
             <p>
-            The Cluster API Provider integrates Metal³ with the Cluster API framework which is used for managing Kubernetes clusters
-            in a
-            declarative manner. It is a comprehensive reference manual outlining the steps needed to optimize computer resources for
-            various tasks... <a href="https://book.metal3.io/capm3/introduction.html" target="_blank"
+              The Cluster API Provider integrates Metal³ with the Cluster API framework which is used for managing
+              Kubernetes clusters
+              in a
+              declarative manner. It is a comprehensive reference manual outlining the steps needed to optimize computer
+              resources for
+              various tasks... <a href="https://book.metal3.io/capm3/introduction.html" target="_blank"
                 rel="noopener noreferrer"> Read more</a>
             </p>
           </div>
@@ -201,10 +180,11 @@ hosts... <a
               <h3 class="section__title">BareMetalHost</h3>
             </a>
             <p>
-            Baremetalhost is a specialized resource that embodies a physical server and all its relevant inventory data. It serves a
-            similar function to a name tag that is placed on each computer to identify its type and capabilities...
-            <a href="https://github.com/metal3-io/baremetal-operator" target="_blank"
-                rel="noopener noreferrer">Read more</a>
+              Baremetalhost is a specialized resource that embodies a physical server and all its relevant inventory
+              data. It serves a
+              similar function to a name tag that is placed on each computer to identify its type and capabilities...
+              <a href="https://github.com/metal3-io/baremetal-operator" target="_blank" rel="noopener noreferrer">Read
+                more</a>
             </p>
           </div>
           <div class="feature__item">
@@ -214,10 +194,13 @@ hosts... <a
               </h3>
             </a>
             <p>
-              The Hardware Classification Controller (HCC) is a specialized controller that categorizes BareMetalHosts into
-              custom-defined groups according to their hardware specifications. It functions similarly to a sorting machine, enabling
+              The Hardware Classification Controller (HCC) is a specialized controller that categorizes BareMetalHosts
+              into
+              custom-defined groups according to their hardware specifications. It functions similarly to a sorting
+              machine, enabling
               users to arrange their computers into distinct groups based on their respective name tags... <a
-                href="https://github.com/metal3-io/hardware-classification-controller" target="_blank" rel="noopener noreferrer">Read
+                href="https://github.com/metal3-io/hardware-classification-controller" target="_blank"
+                rel="noopener noreferrer">Read
                 more</a>
             </p>
           </div>
@@ -226,11 +209,13 @@ hosts... <a
               <h3 class="section__title">IP Address Manager (IPAM)</h3>
             </a>
             <p>
-            The IP address manager is a crucial component responsible for assigning unique IP addresses to BareMetalHosts from a
-            pool of available addresses. This system functions similarly to a phone book that provides each computer with a
-            distinctive identification number, enabling communication between them.... <a
-              href="https://book.metal3.io/ipam/introduction.html" target="_blank"
-                rel="noopener noreferrer">Read more</a>
+              The IP address manager is a crucial component responsible for assigning unique IP addresses to
+              BareMetalHosts from a
+              pool of available addresses. This system functions similarly to a phone book that provides each computer
+              with a
+              distinctive identification number, enabling communication between them.... <a
+                href="https://book.metal3.io/ipam/introduction.html" target="_blank" rel="noopener noreferrer">Read
+                more</a>
             </p>
           </div>
           <div class="feature__item">
@@ -240,10 +225,11 @@ hosts... <a
               </h3>
             </a>
             <p>
-            The Metal³ Hardware Inventory Record is a specialized resource designed to store hardware inventory data gathered from
-            BareMetalHosts. It functions similarly to a diary, keeping a detailed log of information regarding your computers and
-            their activities... <a
-              href="https://github.com/metal3-io/ironic-hardware-inventory-recorder-image" target="_blank"
+              The Metal³ Hardware Inventory Record is a specialized resource designed to store hardware inventory data
+              gathered from
+              BareMetalHosts. It functions similarly to a diary, keeping a detailed log of information regarding your
+              computers and
+              their activities... <a href="https://github.com/metal3-io/ironic-hardware-inventory-recorder-image" target="_blank"
                 rel="noopener noreferrer">Read more</a>
             </p>
           </div>
@@ -253,7 +239,7 @@ hosts... <a
       <div class="keybinding">
         <ul class="keybinding__detail">
           <h3 class="keybinding__title">Goals</h3>
-          
+
           <li>
             To provide a framework that is scalable, vendor-neutral, and
             accessible to users of any skill level.
@@ -265,12 +251,7 @@ hosts... <a
             common tasks associated with managing servers.
           </li>
 
-          <br />
 
-          <li>
-            Metal3 aims to provide a consistent and declarative API for managing
-            bare metal infrastructure.
-          </li>
         </ul>
         <ul class="keybinding__detail">
           <h3 class="keybinding__title">Missions</h3>
@@ -280,29 +261,20 @@ hosts... <a
             infrastructure as easy as cloud infrastructure.
           </li>
           <br />
-          <li>
-            To provide a solution that is suitable for use in various use cases,
-            including edge computing, high-performance computing, and
-            traditional data centers
+        <li>
+          Metal3 aims to provide a consistent and declarative API for managing
+          bare metal infrastructure while also being open source and community driven
           </li>
           <br />
-          <li>
-            To automate the lifecycle management of bare metal hosts, including
-            provisioning, configuration, and decommissioning
-          </li>
+          
         </ul>
       </div>
       <div class="callout">
         <p>Read the Metal³.io user-guide for more in-dept description</p>
-        <a
-          href="https://book.metal3.io/introduction.html"
-          class="button--secondary"
-          target="_blank"
-          >User-Guide</a
-        >
+        <a href="https://book.metal3.io/introduction.html" class="button--secondary" target="_blank">User-Guide</a>
       </div>
     </div>
-<!-- <div class="wrapper">
+    <!-- <div class="wrapper">
   <div class="installation">
     <h3 class="section__title">Quick Code Overview</h3>
     <div class="tab__container">
@@ -364,7 +336,7 @@ hosts... <a
     </div>
   </div>
 </div> -->
-    <div class="changelog">
+    <!-- <div class="changelog">
       <div class="wrapper">
         <h3 class="section__title">
           Read about the newest updates in Metal³.io Community
@@ -376,32 +348,23 @@ hosts... <a
           </div>
           <div class="changelog__detail">
             <ul>
-              <a
-                href="https://metal3.io/blog/2022/07/08/One_cluster_multiple_providers.html"
-                target="_blank">
+              <a href="https://metal3.io/blog/2022/07/08/One_cluster_multiple_providers.html" target="_blank">
                 <li>One cluster - multiple providers</li>
               </a>
 
-              <a
-                href="https://metal3.io/blog/2021/05/05/Pivoting.html"
-                target="_blank">
+              <a href="https://metal3.io/blog/2021/05/05/Pivoting.html" target="_blank">
                 <li>Metal3 Introduces Pivoting</li>
               </a>
 
-              <a
-                href="https://metal3.io/blog/2020/07/06/IP_address_manager.html"
-                target="_blank">
+              <a href="https://metal3.io/blog/2020/07/06/IP_address_manager.html" target="_blank">
                 <li>Introducing the Metal3 IP Address Manager</li>
               </a>
 
-              <a
-                href="https://metal3.io/blog/2020/07/05/raw-image-streaming.html"
-                target="_blank">
+              <a href="https://metal3.io/blog/2020/07/05/raw-image-streaming.html" target="_blank">
                 <li>Raw image streaming available in Metal3</li>
               </a>
 
-              <a
-                href="https://metal3.io/blog/2020/06/18/Metal3-dev-env-BareMetal-Cluster-Deployment.html"
+              <a href="https://metal3.io/blog/2020/06/18/Metal3-dev-env-BareMetal-Cluster-Deployment.html"
                 target="_blank">
                 <li>
                   Metal³ development environment walkthrough part 2: Deploying a
@@ -417,14 +380,12 @@ hosts... <a
           </div>
           <div class="changelog__detail">
             <ul>
-              <a
-                href="https://metal3.io/blog/2019/11/13/Extend_Your_Data_Center_to_the_Hybrid_Edge-Red_Hat_Summit.html"
+              <a href="https://metal3.io/blog/2019/11/13/Extend_Your_Data_Center_to_the_Hybrid_Edge-Red_Hat_Summit.html"
                 target="_blank">
                 <li>Extend Your Data Center to the Hybrid Edge</li>
               </a>
 
-              <a
-                href="https://metal3.io/blog/2019/10/31/OpenStack-Ironic-and-Bare-Metal-Infrastructure_All-Abstractions-Start-Somewhere.html"
+              <a href="https://metal3.io/blog/2019/10/31/OpenStack-Ironic-and-Bare-Metal-Infrastructure_All-Abstractions-Start-Somewhere.html"
                 target="_blank">
                 <li>
                   OpenStack Ironic and Bare Metal Infrastructure: All
@@ -432,9 +393,7 @@ hosts... <a
                 </li>
               </a>
 
-              <a
-                href="https://metal3.io/blog/2020/03/05/CAPI_provider_renaming.html"
-                target="_blank">
+              <a href="https://metal3.io/blog/2020/03/05/CAPI_provider_renaming.html" target="_blank">
                 <li>Cluster API provider renaming</li>
               </a>
             </ul>
@@ -447,14 +406,11 @@ hosts... <a
           </div>
           <div class="changelog__detail">
             <ul>
-              <a
-                href="https://metal3.io/blog/2020/02/27/talk-kubernetes-finland-metal3.html"
-                target="_blank">
+              <a href="https://metal3.io/blog/2020/02/27/talk-kubernetes-finland-metal3.html" target="_blank">
                 <li>Metal³: Kubernetes Native Bare Metal Cluster Management</li>
               </a>
 
-              <a
-                href="https://metal3.io/blog/2020/06/18/Metal3-dev-env-BareMetal-Cluster-Deployment.html"
+              <a href="https://metal3.io/blog/2020/06/18/Metal3-dev-env-BareMetal-Cluster-Deployment.html"
                 target="_blank">
                 <li>
                   Metal³ development environment walkthrough part 2: Deploying a
@@ -462,8 +418,7 @@ hosts... <a
                 </li>
               </a>
 
-              <a
-                href="https://metal3.io/blog/2019/11/07/Kubernetes-native_Infrastructure-Managed_Baremetal_with_Kubernetes_Operators_and_OpenStack_Ironic.html"
+              <a href="https://metal3.io/blog/2019/11/07/Kubernetes-native_Infrastructure-Managed_Baremetal_with_Kubernetes_Operators_and_OpenStack_Ironic.html"
                 target="_blank">
                 <li>
                   Kubernetes-native Infrastructure: Managed Baremetal with
@@ -471,8 +426,7 @@ hosts... <a
                 </li>
               </a>
 
-              <a
-                href="https://metal3.io/blog/2019/10/31/OpenStack-Ironic-and-Bare-Metal-Infrastructure_All-Abstractions-Start-Somewhere.html"
+              <a href="https://metal3.io/blog/2019/10/31/OpenStack-Ironic-and-Bare-Metal-Infrastructure_All-Abstractions-Start-Somewhere.html"
                 target="_blank">
                 <li>
                   OpenStack Ironic and Bare Metal Infrastructure: All
@@ -484,64 +438,37 @@ hosts... <a
         </div>
 
         <div class="changelog__callout">
-          <a
-            href="https://metal3.io/blog/"
-            class="button--secondary"
-            target="_blank"
-            >Check Full Blog</a
-          >
+          <a href="https://metal3.io/blog/" class="button--secondary" target="_blank">Check Full Blog</a>
         </div>
       </div>
-    </div>
+    </div> -->
     <footer class="footer">
       <div>
         <p>This is a minified version of the landing page with focus on content. Click <a
-            href="https://full-draft-metal3-outreachy-project.vercel.app/" target="_blank" rel="noopener noreferrer">here</a>
+            href="https://full-draft-metal3-outreachy-project.vercel.app/" target="_blank"
+            rel="noopener noreferrer">here</a>
           for full draft</p>
-      
+
       </div>
       <p>
         Copyright 2023 The Metal³ Contributors -
-        <a
-          href="https://metal3.io/privacy-statement.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Privacy Statement</a
-        >
+        <a href="https://metal3.io/privacy-statement.html" target="_blank" rel="noopener noreferrer">Privacy
+          Statement</a>
       </p>
       <div>
-        <a
-          href="https://github.com/metal3-io/metal3-io.github.io"
-          class="link link--dark"
-          target="_blank">
-          <i class="fa fa-github"></i
-        ></a>
-        <a
-          href="https://twitter.com/metal3_io"
-          class="link link--dark"
-          target="_blank">
-          <i class="fa fa-twitter"></i
-        ></a>
+        <a href="https://github.com/metal3-io/metal3-io.github.io" class="link link--dark" target="_blank">
+          <i class="fa fa-github"></i></a>
+        <a href="https://twitter.com/metal3_io" class="link link--dark" target="_blank">
+          <i class="fa fa-twitter"></i></a>
 
-        <a
-          href="https://www.youtube.com/channel/UC_xneeYbo-Dl4g-U78xW15g/videos"
-          class="link link--dark"
+        <a href="https://www.youtube.com/channel/UC_xneeYbo-Dl4g-U78xW15g/videos" class="link link--dark"
           target="_blank">
-          <i class="fa fa-youtube"></i
-        ></a>
-        <a
-          href="https://groups.google.com/g/metal3-dev"
-          class="link link--dark"
-          target="_blank">
-          <i class="fa fa-envelope"></i
-        ></a>
+          <i class="fa fa-youtube"></i></a>
+          <a href="https://groups.google.com/g/metal3-dev" class="link link--dark" target="_blank">
+            <i class="fa fa-envelope"></i></a>
 
-        <a
-          href="https://kubernetes.slack.com/messages/CHD49TLE7"
-          class="link link--dark"
-          target="_blank">
-          <i class="fa fa-hashtag"></i
-        ></a>
+        <a href="https://kubernetes.slack.com/messages/CHD49TLE7" class="link link--dark" target="_blank">
+          <i class="fa fa-hashtag"></i></a>
       </div>
     </footer>
 
@@ -551,4 +478,5 @@ hosts... <a
     </script>
     <script src="./script.js"></script>
   </body>
+
 </html>
