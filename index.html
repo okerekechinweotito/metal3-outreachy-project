@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -47,15 +46,15 @@
             Documentation</a>
         </li>
         <li class="menu__item">
-          <a href="https://github.com/metal3-io" class="link link--dark" target="_blank"><i class="fa fa-github"></i>
-            Github</a>
+          <a href="https://github.com/metal3-io" class="link link--dark" target="_blank"><i class="fa fa-github"></i> Github</a>
         </li>
       </ul>
     </nav>
     <div class="intro">
       <h1>
         <!-- Automate the deployment of bare metal infrastructure using Kubernetes.  -->
-        Metal³ - The Future of Infrastructure <br> Deployment is Here!
+        Metal³ - The Future of Infrastructure <br />
+        Deployment is Here!
       </h1>
 
       <p>
@@ -92,7 +91,19 @@
     </div>
     <div class="hero__terminal">
       <pre>
-        <code class="shell-session demo">Metal³ Prerequisites</code>
+        <p class="shell-session demo"> <span class="focus">Metal³ Prerequisites</span>
+          -System with CentOS 8 Stream or Ubuntu 20.04
+          -Bare metal preferred, as we will be creating VMs to emulate bare metal hosts
+          -Run as a user with passwordless sudo access
+          -Minimum resource requirements for the host machine: 4C CPUs, 16 GB RAM memory
+        
+          <span class="focus">Operations with Metal³</span>
+          -Discover hardware inventory and configure BIOS / RAID settings on your hosts
+          -Optionally clean a host's disks as part of provisioning
+          -Install and boot operating system image of choice
+          -Deploy Kubernetes with non-disruptive rolling upgrades.
+          -Auto-fix failed nodes by rebooting or removing them from the cluster.
+          <p />
       </pre>
     </div>
 
@@ -100,59 +111,62 @@
       <h1>Why Metal³.io</h1>
 
       <p>
-        The <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³.io</a> project is a promising
-        open-source initiative that aims to revolutionize the way infrastructure management
-        is done in the Kubernetes ecosystem. By leveraging the capabilities of Kubernetes, <a href="https://metal3.io/"
-          target="_blank" rel="noopener noreferrer">Metal³</a> is building a Kubernetes
-        native API for managing bare metal hosts via a provisioning stack that runs on Kubernetes.
+        The
+        <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³.io</a>
+        project is a promising open-source initiative that aims to revolutionize
+        the way infrastructure management is done in the Kubernetes ecosystem.
+        By leveraging the capabilities of Kubernetes,
+        <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a>
+        is building a Kubernetes native API for managing bare metal hosts via a
+        provisioning stack that runs on Kubernetes.
       </p>
 
       <h4>Uses Ironic</h4>
       <p>
-
-        <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a> builds on the work of other
-        open-source tools for bare metal host provisioning, such as <a href="https://book.metal3.io/ironic/introduction.html"
-          target="_blank" rel="noopener noreferrer">Ironic</a>,
-        and
-        extends
-        their capabilities by providing a Kubernetes-native API. This approach enables users to manage their bare metal
-        infrastructure just like they manage their applications, using familiar tools and interfaces, and leveraging the
-        scalability and flexibility of <a href="https://kubernetes.io/" target="_blank"
-          rel="noopener noreferrer">Kubernetes.</a>
+        <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a>
+        builds on the work of other open-source tools for bare metal host
+        provisioning, such as
+        <a href="https://book.metal3.io/ironic/introduction.html" target="_blank" rel="noopener noreferrer">Ironic</a>, and
+        extends their capabilities by providing a Kubernetes-native API.
+        This approach enables users to manage their bare metal infrastructure
+        just like they manage their applications, using familiar tools and
+        interfaces, and leveraging the scalability and flexibility of
+        <a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer">Kubernetes.</a>
       </p>
       <h4>Cluster API</h4>
 
       <p>
-        One of the key features of <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a> is
-        its
-        integration with the <a href="https://book.metal3.io/capm3/introduction.html" target="_blank"
-          rel="noopener noreferrer">Kubernetes cluster-API project.</a>
+        One of the key features of
+        <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a>
+        is its integration with the
+        <a href="https://book.metal3.io/capm3/introduction.html" target="_blank" rel="noopener noreferrer">Kubernetes
+          cluster-API project.</a>
         This integration allows
-        <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a> to be used as an
-        infrastructure
-        backend for Machine objects from the <a href="https://book.metal3.io/capm3/introduction.html" target="_blank"
-          rel="noopener noreferrer">Cluster API</a>, making it easier for users to
-        manage and deploy their bare metal hosts.
+        <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a>
+        to be used as an infrastructure backend for Machine objects from the
+        <a href="https://book.metal3.io/capm3/introduction.html" target="_blank" rel="noopener noreferrer">Cluster API</a>,
+        making it easier for users to manage and deploy their bare metal
+        hosts.
         </p>
         
         <h4>Scalable and Open-Source</h4>
 
-        <p>
-        With <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a>, users can deploy and
-        manage
-        their bare metal infrastructure at scale, similar to how cloud providers manage
-        virtual machines. This solution is ideal for use cases that require high-performance computing, edge computing,
-        and
-        traditional data centers. By providing a scalable, open-source solution for bare metal infrastructure
-        management, <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a>
-        is empowering users to take control of their infrastructure and leverage the full potential of <a
-          href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer">Kubernetes.</a>
+      <p>
+        With
+        <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a>, users can deploy and manage their
+        bare metal infrastructure at scale,
+        similar to how cloud providers manage virtual machines. This solution is
+        ideal for use cases that require high-performance computing, edge
+        computing, and traditional data centers. By providing a scalable,
+        open-source solution for bare metal infrastructure management,
+        <a href="https://metal3.io/" target="_blank" rel="noopener noreferrer">Metal³</a>
+        is empowering users to take control of their infrastructure and leverage
+        the full potential of
+        <a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer">Kubernetes.</a>
       </p>
     </section>
 
     <div class="wrapper">
-
-
       <section class="feature-wrapper">
         <h1>Components</h1>
         <div class="feature">
@@ -161,26 +175,29 @@
               <h3 class="section__title">Baremetal Operator (BMO)</h3>
             </a>
             <p>
-              Baremetal operator is a Metal³ component that automates the deployment and management of bare metal
-              infrastructure. It uses Ironic, an OpenStack project, as the underlying provisioning and management tool
-              for bare metal
-              servers. It is the main component that interfaces with the Ironic API for all operations needed to
-              provision bare-metal
-              hosts... <a href="https://book.metal3.io/bmo/introduction.html" target="_blank">Read more</a>
+              Baremetal operator is a Metal³ component that automates the
+              deployment and management of bare metal infrastructure. It uses
+              Ironic, an OpenStack project, as the underlying provisioning and
+              management tool for bare metal servers. It is the main component
+              that interfaces with the Ironic API for all operations needed to
+              provision bare-metal hosts...
+              <a href="https://book.metal3.io/bmo/introduction.html" target="_blank">Read more</a>
             </p>
           </div>
           <div class="feature__item">
             <a href="https://book.metal3.io/capm3/introduction.html" target="_blank">
-              <h3 class="section__title">Cluster API Provider Metal³ (CAPM3)</h3>
+              <h3 class="section__title">
+                Cluster API Provider Metal³ (CAPM3)
+              </h3>
             </a>
             <p>
-              The Cluster API Provider integrates Metal³ with the Cluster API framework which is used for managing
-              Kubernetes clusters
-              in a
-              declarative manner. It is a comprehensive reference manual outlining the steps needed to optimize computer
-              resources for
-              various tasks... <a href="https://book.metal3.io/capm3/introduction.html" target="_blank"
-                rel="noopener noreferrer"> Read more</a>
+              The Cluster API Provider integrates Metal³ with the Cluster API
+              framework which is used for managing Kubernetes clusters in a
+              declarative manner. It is a comprehensive reference manual
+              outlining the steps needed to optimize computer resources for
+              various tasks...
+              <a href="https://book.metal3.io/capm3/introduction.html" target="_blank" rel="noopener noreferrer">
+                Read more</a>
             </p>
           </div>
           <div class="feature__item">
@@ -188,11 +205,11 @@
               <h3 class="section__title">BareMetalHost</h3>
             </a>
             <p>
-              Baremetalhost is a specialized resource that embodies a physical server and all its relevant inventory
-              data. It serves a
-              similar function to a name tag that is placed on each computer to identify its type and capabilities...
-              <a href="https://github.com/metal3-io/baremetal-operator" target="_blank" rel="noopener noreferrer">Read
-                more</a>
+              Baremetalhost is a specialized resource that embodies a physical
+              server and all its relevant inventory data. It serves a similar
+              function to a name tag that is placed on each computer to identify
+              its type and capabilities...
+              <a href="https://github.com/metal3-io/baremetal-operator" target="_blank" rel="noopener noreferrer">Read more</a>
             </p>
           </div>
           <div class="feature__item">
@@ -202,13 +219,13 @@
               </h3>
             </a>
             <p>
-              The Hardware Classification Controller (HCC) is a specialized controller that categorizes BareMetalHosts
-              into
-              custom-defined groups according to their hardware specifications. It functions similarly to a sorting
-              machine, enabling
-              users to arrange their computers into distinct groups based on their respective name tags... <a
-                href="https://github.com/metal3-io/hardware-classification-controller" target="_blank"
-                rel="noopener noreferrer">Read
+              The Hardware Classification Controller (HCC) is a specialized
+              controller that categorizes BareMetalHosts into custom-defined
+              groups according to their hardware specifications. It functions
+              similarly to a sorting machine, enabling users to arrange their
+              computers into distinct groups based on their respective name
+              tags...
+              <a href="https://github.com/metal3-io/hardware-classification-controller" target="_blank" rel="noopener noreferrer">Read
                 more</a>
             </p>
           </div>
@@ -217,13 +234,12 @@
               <h3 class="section__title">IP Address Manager (IPAM)</h3>
             </a>
             <p>
-              The IP address manager is a crucial component responsible for assigning unique IP addresses to
-              BareMetalHosts from a
-              pool of available addresses. This system functions similarly to a phone book that provides each computer
-              with a
-              distinctive identification number, enabling communication between them.... <a
-                href="https://book.metal3.io/ipam/introduction.html" target="_blank" rel="noopener noreferrer">Read
-                more</a>
+              The IP address manager is a crucial component responsible for
+              assigning unique IP addresses to BareMetalHosts from a pool of
+              available addresses. This system functions similarly to a phone
+              book that provides each computer with a distinctive identification
+              number, enabling communication between them....
+              <a href="https://book.metal3.io/ipam/introduction.html" target="_blank" rel="noopener noreferrer">Read more</a>
             </p>
           </div>
           <div class="feature__item">
@@ -233,11 +249,12 @@
               </h3>
             </a>
             <p>
-              The Metal³ Hardware Inventory Record is a specialized resource designed to store hardware inventory data
-              gathered from
-              BareMetalHosts. It functions similarly to a diary, keeping a detailed log of information regarding your
-              computers and
-              their activities... <a href="https://github.com/metal3-io/ironic-hardware-inventory-recorder-image" target="_blank"
+              The Metal³ Hardware Inventory Record is a specialized resource
+              designed to store hardware inventory data gathered from
+              BareMetalHosts. It functions similarly to a diary, keeping a
+              detailed log of information regarding your computers and their
+              activities...
+              <a href="https://github.com/metal3-io/ironic-hardware-inventory-recorder-image" target="_blank"
                 rel="noopener noreferrer">Read more</a>
             </p>
           </div>
@@ -258,8 +275,6 @@
             infrastructure by leveraging Kubernetes to automate many of the
             common tasks associated with managing servers.
           </li>
-
-
         </ul>
         <ul class="keybinding__detail">
           <h3 class="keybinding__title">Missions</h3>
@@ -269,12 +284,12 @@
             infrastructure as easy as cloud infrastructure.
           </li>
           <br />
-        <li>
-          Metal3 aims to provide a consistent and declarative API for managing
-          bare metal infrastructure while also being open source and community driven
+          <li>
+            Metal3 aims to provide a consistent and declarative API for managing
+            bare metal infrastructure while also being open source and community
+            driven
           </li>
           <br />
-          
         </ul>
       </div>
       <div class="callout">
@@ -282,68 +297,7 @@
         <a href="https://book.metal3.io/introduction.html" class="button--secondary" target="_blank">User-Guide</a>
       </div>
     </div>
-    <div class="wrapper">
-  <div class="installation">
-    <h3 class="section__title">Quick Code Overview</h3>
-    <div class="tab__container">
-      <ul class="tab__menu">
-        <li class="tab active" data-tab="mac">setup</li>
-        <li class="tab" data-tab="linux">tear down</li>
-        <li class="tab" data-tab="win">env var</li>
-      </ul>
-      <pre class="nohighlight code">
-              <code class="tab__pane active mac">
-                clone <a href="https://github.com/metal3-io/metal3-io.github.io" target="_blank" class="repo-link">
-                  metal³-dev-env</a> and run <br/>
-                $  make <br/><br />
-  
-              The Makefile runs a series of scripts, described here:<br /><br />
-  
-              01_prepare_host.sh - Installs all needed packages.<br /><br />
-  
-              02_configure_host.sh - Creates a set of VMs that will be managed as if they were bare metal hosts. It also downloads
-              some images needed for Ironic.<br /><br />
-  
-              03_launch_mgmt_cluster.sh - Launches a management cluster using minikube or kind and runs the baremetal-operator on that
-              cluster.<br /><br />
-  
-              04_verify.sh - Runs a set of tests that verify that the deployment completed successfully.<br /><br />
-  
-              When the environment setup is completed, you should be able to see BareMetalHost (bmh) objects in Ready state.
-              </code>
-              <code class="tab__pane linux">
-                To tear down the environment, run <br />
-                $ make clean <br/><br />
-  
-              Note<br />
-  
-              When redeploying metal³-dev-env with a different release version of CAPM3, you must set the FORCE_REPO_UPDATE variable
-              in config_${user}.sh to true.<br /><br />
-  
-              Warning<br />
-  
-              If you see this error during the installation:<br />
-  
-  
-              error: failed to connect to the hypervisor \ <br />
-              error: Failed to connect socket to '/var/run/libvirt/libvirt-sock': Permission denied<br /><br />
-              You may need to log out then login again, and run make clean and make again.
-  
-  
-              </code>
-              <code class="tab__pane win">
-                To set environment variables persistently, export them from the configuration file used by metal³-dev-env scripts: <br /><br />
-                $ cp config_example.sh
-                config_$(whoami).sh
-                <br />
-                $ vim config_$(whoami).sh <br /><br />
-  
-              More information about the specific environment variables used to set up metal3-dev-env can be found <a href="https://github.com/metal3-io/metal3-dev-env/blob/master/vars.md" target="_blank" rel="noopener noreferrer">here</a>
-              </code>
-            </pre>
-    </div>
-  </div>
-</div>
+    
     <div class="changelog">
       <div class="wrapper">
         <h3 class="section__title">
@@ -451,11 +405,9 @@
       </div>
     </div>
     <footer class="footer">
-    
       <p>
         Copyright 2023 The Metal³ Contributors -
-        <a href="https://metal3.io/privacy-statement.html" target="_blank" rel="noopener noreferrer">Privacy
-          Statement</a>
+        <a href="https://metal3.io/privacy-statement.html" target="_blank" rel="noopener noreferrer">Privacy Statement</a>
       </p>
       <div>
         <a href="https://github.com/metal3-io/metal3-io.github.io" class="link link--dark" target="_blank">
@@ -480,5 +432,4 @@
     </script>
     <script src="./script.js"></script>
   </body>
-
 </html>

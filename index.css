@@ -49,6 +49,9 @@ hr {
   border-bottom: 1px solid var(--bg-color);
 }
 
+.focus {
+  color: var(--primary-color);
+}
 * {
   box-sizing: border-box;
 }
@@ -460,6 +463,7 @@ nav {
 .shell-session {
   color: var(--medium-gray-color);
   font-size: 18px;
+  line-height: 30px;
 }
 
 /* feature section */
