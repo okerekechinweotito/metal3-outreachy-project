@@ -1,34 +1,38 @@
-/* css variables*/
+/*----- css variables ------*/
 :root {
   --primary-color: #4fd1c5;
-    --primary-color-light: #6edde2;
-    --primary-color-dark: #1f8681;
-    --accent-color: #c54f5b;
-    --accent-color-light: #ffe4e4;
-    --accent-color-dark: #b94b4c;
-    --white-color: #fafbfc;
-    --light-gray-color: #edf2f7;
-    --medium-gray-color: #a0aec0;
-    --dark-gray-color: #a0aec0;
-    --bg-color: #1a202c;
-    --code-bg-color: #f0e8e8;
-    --mate-black: #3f444e;
+  --primary-color-light: #6edde2;
+  --primary-color-dark: #1f8681;
+  --accent-color: #c54f5b;
+  --accent-color-light: #ffe4e4;
+  --accent-color-dark: #b94b4c;
+  --white-color: #fafbfc;
+  --light-gray-color: #edf2f7;
+  --medium-gray-color: #a0aec0;
+  --dark-gray-color: #a0aec0;
+  --bg-color: #1a202c;
+  --code-bg-color: #f0e8e8;
+  --mate-black: #3f444e;
   --pure-black: #000;
 }
 
-/* normalized */
+/* ------- Global Tag Styles ---------*/
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   background-color: var(--bg-color);
 }
 
+* {
+  box-sizing: border-box;
+}
 h4 {
   color: var(--primary-color);
   margin: 0 0 -0.5em 0;
 }
+
 p {
   font-weight: 300;
   color: var(--medium-gray-color);
@@ -49,131 +53,28 @@ hr {
   border-bottom: 1px solid var(--bg-color);
 }
 
-.focus {
-  color: var(--primary-color);
-}
-* {
-  box-sizing: border-box;
-}
-
-/* background color of the scrollbar track */
 ::-webkit-scrollbar {
   background-color: var(--bg-color);
 }
 
-/* color and width of the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
 }
-/* global components */
 
-/* typography */
-.section__title {
-  color: var(--primary-color);
+/* Styling of classes used by multiple elements */
+.wrapper {
+  margin: 0 auto;
+  width: 70%;
 }
 
-/* tabs */
-.tab__container {
-  position: relative;
-}
-
-.tab__container>ul {
-  position: absolute;
-  list-style: none;
-  margin: 0;
-  right: 1rem;
-  top: -2rem;
-  padding-left: 0;
-}
-
-.tab__container .code {
-  white-space: normal;
-  padding: 1rem 1.5rem;
-}
-
-.tab {
-  display: inline-block;
-  padding: 0.3rem 0.5rem;
-  font-weight: 200;
-  cursor: pointer;
-  color: var(--white-color);
-  font-size: 18px;
-}
-
-.tab.active {
-  border-bottom: 1px solid var(--accent-color);
-  font-weight: 700;
-  display: inline-block;
-  color: var(--accent-color);
-}
-
-.tab__pane {
-  display: none;
-}
-
-.tab__pane.active {
-  display: block;
-  color: var(--white-color);
-  font-size: 18px;
-}
-
-@media (max-width: 600px) {
-  .tab__pane.active {
-    font-size: 12px;
+@media (max-width: 750px) {
+  .wrapper {
+    width: 90%;
   }
 }
 
-/* code */
-.code {
-  border-radius: 3px;
-  font-family: Space Mono, SFMono-Regular, Menlo, Monaco, Consolas,
-      Liberation Mono, Courier New, monospace;
-  background: var(--bg-color);
-  border: 1px solid var(--code-bg-color);
-  color: var(--primary-color-light);
-}
-
-.code--block {
-  white-space: pre-line;
-  padding: 0 1.5rem;
-}
-
-.code--inline {
-  padding: 3px 6px;
-  font-size: 80%;
-}
-
-/* buttons */
-
-.button--primary {
-  padding: 10px 22px;
-  background-color: var(--accent-color);
-  color: white;
-  position: relative;
-  text-decoration: none;
-  border: 0;
-  transition: all 0.3s ease-out;
-}
-
-.button--primary:after {
-  position: absolute;
-  content: "";
-  width: 1rem;
-  height: 1rem;
-  background-color: var(--accent-color-light);
-  right: -0.4rem;
-  top: -0.4rem;
-  transition: all 0.3s ease-out;
-}
-
-.button--primary:hover {
-  text-shadow: 0px 1px 1px var(--accent-color-dark);
-  color: white;
-  transform: translate3D(0, -3px, 0);
-}
-
-.button--primary:hover::after {
-  transform: rotate(90deg);
+.section__title {
+  color: var(--primary-color);
 }
 
 .button--secondary {
@@ -187,7 +88,6 @@ hr {
   color: var(--accent-color);
 }
 
-/* links */
 .link {
   text-decoration: none;
   transition: all 0.3s ease-out;
@@ -201,17 +101,35 @@ hr {
   color: var(--primary-color);
 }
 
-.link--light {
-  color: var(--accent-color);
-}
-
-/* menu */
+/*------ Header  Section ------*/
 nav {
   display: grid;
   grid-template-columns: 200px auto;
   width: 100%;
   height: 70px;
   margin: 1em 0 0 0;
+  background-color: var(--bg-color);
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 300px;
+  height: auto;
+  text-decoration: none !important;
+}
+
+.logo-wrapper h2 {
+  color: var(--light-gray-color);
+}
+
+.logo {
+  background: url('https://book.metal3.io/images/metal3-color.svg') no-repeat;
+  background-size: contain;
+  margin: 0 0 0 auto;
+  width: 50px;
+  height: 50px;
 }
 
 .menu {
@@ -233,7 +151,7 @@ nav {
 .toggle span,
 .toggle span:before,
 .toggle span:after {
-  content: "";
+  content: '';
   position: absolute;
   height: 2px;
   width: 18px;
@@ -279,75 +197,48 @@ nav {
   display: none;
 }
 
-/* layout */
-.wrapper {
-  margin: 0 auto;
-  width: 70%;
-}
-
-@media (max-width: 750px) {
-  .wrapper {
-    width: 90%;
+@media screen and (max-width: 800px) {
+  .logo {
+    margin: 0rem 0 0 1rem;
   }
 }
-.footer {
-  text-align: center;
-  background-color: var(--bg-color);
-  padding: 2rem;
-  color: var(--medium-gray-color);
-  box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.4);
-}
 
-.footer i {
-  font-size: 25px;
-}
-
-.footer div {
-  display: flex;
-  gap: 1em;
-  justify-content: center;
-}
-
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 30px, 0);
+@media screen and (max-width: 600px) {
+  nav {
+    grid-template-columns: 70px auto;
+    height: auto;
   }
 
-    100% {
-      transform: translate3d(0, 0, 0);
-    }
-    }
+  .menu__item {
+    display: none;
+  }
 
-/* ----------------------------- */
+  .menu__item.toggle {
+    display: inline-block;
+  }
 
-/* nav specialized to landing page */
-.logo-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 300px;
-  height: auto;
-  text-decoration: none !important;
+  .menu {
+    text-align: right;
+    padding: 0.5rem 1rem;
+    display: block;
+    margin: 0.5em 1em 0 0;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  .menu.responsive .menu__item:not(:first-child) {
+    display: block;
+    padding: 0 0 0.5rem 0;
+  }
+
+  .logo {
+    margin: 0rem 0 0 1rem;
+  }
 }
 
-.logo-wrapper h2 {
-  color: var(--light-gray-color);
-}
-
-.logo {
-  background: url("https://book.metal3.io/images/metal3-color.svg") no-repeat;
-  background-size: contain;
-  margin: 0 0 0 auto;
-  width: 50px;
-  height: 50px;
-}
-
-nav {
-  background-color: var(--bg-color);
-}
-
-/* Intro section */
+/*------- Metal³ Intro section -------*/
 
 .intro {
   display: flex;
@@ -406,7 +297,27 @@ nav {
   background-color: var(--pure-black);
 }
 
-/* hero section */
+@media screen and (max-width: 600px) {
+  .intro h1 {
+    font-size: 32px;
+  }
+
+  .intro p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .intro-button-wrapper {
+    flex-direction: column;
+  }
+
+  .intro-button-wrapper .button--start,
+  .intro-button-wrapper .button--github {
+    width: 300px;
+  }
+}
+
+/*-------- Metal³ Overview section  -------- */
 .hero {
   text-align: center;
   background-color: var(--bg-color);
@@ -422,6 +333,16 @@ nav {
   margin: -1rem auto 2rem auto;
 }
 
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
 .hero__terminal {
   width: 60%;
   margin: -11rem auto 3rem auto;
@@ -439,7 +360,34 @@ nav {
   padding-top: 1rem;
 }
 
+.hero__terminal span {
+  color: var(--primary-color);
+}
 
+.shell-session {
+  color: var(--medium-gray-color);
+  font-size: 18px;
+  line-height: 30px;
+}
+
+@media (max-width: 750px) {
+  .hero__terminal {
+    width: 90%;
+  }
+
+  .hero__terminal pre p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+/*--------- Why Metal³ section ------- */
 .describe {
   width: 60%;
   margin: auto;
@@ -456,24 +404,19 @@ nav {
   word-spacing: 10px;
 }
 
-/* Quick Code Overview */
+@media screen and (max-width: 600px) {
+  .describe {
+    width: 90%;
+  }
 
-.repo-link {
-  color: var(--primary-color) !important;
-  text-decoration: underline;
+  .describe p {
+    font-size: 16px;
+    word-spacing: normal;
+    text-align: justify;
+  }
 }
 
-.repo-link:hover {
-  color: var(--accent-color) !important;
-}
-
-.shell-session {
-  color: var(--medium-gray-color);
-  font-size: 18px;
-  line-height: 30px;
-}
-
-/* feature section */
+/* --------- Metal³ Components section -------- */
 .feature-wrapper {
   margin: 5em 0 0 0;
 }
@@ -500,11 +443,27 @@ nav {
 .feature__item .section__title:hover {
   color: var(--accent-color);
 }
+
 .feature__item p {
   margin-top: 0.5rem;
 }
 
-/* keybinding section */
+@media (max-width: 750px) {
+  .feature {
+    flex-direction: column;
+  }
+
+  .feature__item {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .feature__item p {
+    font-size: 16px;
+  }
+}
+
+/* -------- Metal³ goals and mission section */
 .keybinding {
   margin-top: 3rem;
   display: flex;
@@ -521,7 +480,7 @@ nav {
 
 .keybinding__title {
   background-color: var(--primary-color) !important;
-    color: var(--pure-black);
+  color: var(--pure-black);
 }
 
 .keybinding__detail li {
@@ -554,7 +513,6 @@ nav {
   padding: 0 0.5rem;
 }
 
-/* callout section */
 .callout {
   text-align: center;
   padding: 1rem 0 3rem 0;
@@ -566,7 +524,17 @@ nav {
   text-decoration: none;
 }
 
-/* changelog section */
+@media (max-width: 750px) {
+  .keybinding {
+    flex-direction: column;
+  }
+
+  .keybinding {
+    font-size: 16px;
+  }
+}
+
+/*---------- Metal³ Blog section --------- */
 .changelog {
   background-color: var(--bg-color);
   padding: 2rem 0;
@@ -597,123 +565,28 @@ nav {
 .changelog__detail {
   line-height: 2em;
 }
-/* Responsive Media Queries */
-@media screen and (max-width: 800px) {
-  .logo {
-    margin: 0rem 0 0 1rem;
-  }
-}
 
 @media (max-width: 750px) {
-  .hero__terminal {
-    width: 90%;
-  }
-.hero__terminal pre p {
-  font-size: 16px;
-}
-.tab__container>ul {
-  right: auto;
-  left: 0;
-  padding-left: 0;
-
-}
-
-  .tab__container .code {
-    margin-top: 2rem;
-  }
-
-  .feature,
-  .keybinding,
   .changelog__item {
     flex-direction: column;
   }
-
-  .feature__item {
-    max-width: 100%;
-    margin: 0;
-  }
-.feature__item p {
-  font-size: 16px;
-}
-  .keybinding {
-    font-size: 16px;
-  }
 }
 
-@media screen and (max-width: 600px) {
-  nav {
-    grid-template-columns: 70px auto;
-      height: auto;
-    }
-    
-    .menu__item {
-      display: none;
-    }
-    
-    .menu__item.toggle {
-      display: inline-block;
-    }
-    
-    .menu {
-      text-align: right;
-      padding: 0.5rem 1rem;
-      display: block;
-      margin: 0.5em 1em 0 0;
-    }
-    
-    .toggle {
-      display: block;
-    }
-    
-    .menu.responsive .menu__item:not(:first-child) {
-      display: block;
-      padding: 0 0 0.5rem 0;
-    }
-  .logo {
-    margin: 0rem 0 0 1rem;
-  }
-
-  .hero {
-    margin: auto;
-    width: 80%;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-  }
-
-  .intro p {
-    width: 100%;
-    text-align: center;
-  }
-
-  .intro-button-wrapper {
-    flex-direction: column;
-  }
-
-  .intro-button-wrapper .button--start,
-  .intro-button-wrapper .button--github {
-    width: 300px;
-  }
-
-        .button--start::after,
-        .button--start:hover,
-        .button--start:active,
-        .button--start:focus {
-          color: var(--pure-black);
-        }
-  .shell-session {
-    font-size: 13px;
-  }
-
-  .describe {
-    width: 90%;
-  }
-
-  .describe p {
-    font-size: 16px;
-    word-spacing: normal;
-    text-align: justify;
-  }
+/*--------- Footer section --------- */
+.footer {
+  text-align: center;
+  background-color: var(--bg-color);
+  padding: 2rem;
+  color: var(--medium-gray-color);
+  box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.4);
 }
-/* ----------------------------------------- */
+
+.footer i {
+  font-size: 25px;
+}
+
+.footer div {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
