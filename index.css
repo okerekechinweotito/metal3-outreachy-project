@@ -399,6 +399,7 @@ nav {
 
 .intro-button-wrapper .button--start:hover {
   background-color: var(--primary-color-dark);
+  color: var(--pure-black);
 }
 
 .intro-button-wrapper .button--github:hover {
@@ -695,6 +696,12 @@ nav {
     width: 300px;
   }
 
+        .button--start::after,
+        .button--start:hover,
+        .button--start:active,
+        .button--start:focus {
+          color: var(--pure-black);
+        }
   .shell-session {
     font-size: 13px;
   }
