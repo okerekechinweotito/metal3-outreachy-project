@@ -285,6 +285,11 @@ nav {
   width: 70%;
 }
 
+@media (max-width: 750px) {
+  .wrapper {
+    width: 90%;
+  }
+}
 .footer {
   text-align: center;
   background-color: var(--bg-color);
